@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<!--  <bean name = "person" class = "Rrce.PersonAdress.Person"  p:pid = "01" p:pname = "Naruto">
+<property name="addr">
+<bean name = "padd" class = "Rrce.PersonAdress.Address" p:cityName = "Konoha" p:pincode = "560078">
+
+</bean>
+</property> 
+
+</bean>-->
+
+<!-- Autowire By Type :- when used with multiple address it throws exceptions because of ambiguity -->
+<!-- <bean name = "person" class = "Rrce.PersonAdress.Person"  p:pid = "01" p:pname = "Naruto" autowire="byType"></bean>
+<bean name = "address" class = "Rrce.PersonAdress.Address" p:cityName = "Konoha" p:pincode = "560078"> -->
+
+
+
+<!-- Autowire By Name -->
+<!-- <bean name = "person" class = "Rrce.PersonAdress.Person"  p:pid = "01" p:pname = "Naruto" autowire="byName" p:addr-ref="padd"></bean>
+<bean name = "padd" class = "Rrce.PersonAdress.Address" p:cityName = "Konoha" p:pincode = "560078"></bean>
+ -->
+ 
+ 
+ <!-- Autowire By Constructor -->
+ 
+ <bean name = "person" class = "Rrce.PersonAdress.Person"  p:pid = "01" p:pname = "Naruto" autowire="constructor" ></bean>
+<bean name = "address" class = "Rrce.PersonAdress.Address" p:cityName = "Konoha" p:pincode = "560078"></bean>
+ 
+</beans>
